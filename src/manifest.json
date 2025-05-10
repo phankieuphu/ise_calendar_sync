@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "ISE Course to Google Calendar",
+  "description": "Automatically adds booked classes from ISE to Google Calendar",
+  "version": "1.0",
+  "default_locale": "en",
+  "icons": {
+    "16": "icons/logo_ise_19.png",
+    "32": "icons/logo_ise_32.png",
+    "48": "icons/logo_ise_96.png",
+    "128": "icons/logo_ise_256.png"
+  },
+  "permissions": [
+    "storage",
+    "identity",
+    "scripting",
+    "activeTab",
+    "cookies",
+    "notifications"
+  ],
+  "oauth2": {
+    "client_id": "{YOUR_GOOGLE_CLIENT_ID}",
+    "scopes": ["https://www.googleapis.com/auth/calendar"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://student.ise.edu.vn/member/course.html"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/logo_ise_32.png"
+  },
+  "host_permissions": ["https://student.ise.edu.vn/*"]
+}

@@ -37,10 +37,3 @@ This Chrome Extension allows students to sync their booked classes from [ISE Stu
 5. Your booked classes will automatically sync to your Google Calendar.
 
 > ✅ For best results, always open the extension from [https://student.ise.edu.vn/member/course.html](https://student.ise.edu.vn/member/course.html)
-
----
-
-## 📁 Project Structure
-
-# ise_calendar_sync
-# ise_calendar_sync
